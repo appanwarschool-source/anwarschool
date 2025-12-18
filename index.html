@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إنشاء درس - Anwarschool</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
+</head>
+<body>
+
+<header>
+    <img src="Anwarschool.png" alt="Anwarschool Logo">
+    <h2>إنشاء درس جديد</h2>
+</header>
+
+<div class="card">
+    <div id="msg"></div>
+    <form id="lessonForm">
+
+        <label>اسم الدرس:</label>
+        <input type="text" id="lessonName" placeholder="ادخل اسم الدرس" required>
+
+        <label>اختر الفصل:</label>
+        <select id="classSelect" required>
+            <option value="">جارٍ التحميل...</option>
+        </select>
+
+        <div id="questionsContainer">
+            <h3>الأسئلة:</h3>
+            <div class="question-card">
+                <textarea placeholder="اكتب السؤال هنا" class="questionText" required></textarea>
+                <input type="text" placeholder="الخيار الأول" class="option">
+                <input type="text" placeholder="الخيار الثاني" class="option">
+                <input type="text" placeholder="الخيار الثالث" class="option">
+                <input type="text" placeholder="الخيار الرابع" class="option">
+                <select class="correctOption" required>
+                    <option value="">اختر الإجابة الصحيحة</option>
+                    <option value="1">الخيار الأول</option>
+                    <option value="2">الخيار الثاني</option>
+                    <option value="3">الخيار الثالث</option>
+                    <option value="4">الخيار الرابع</option>
+                </select>
+            </div>
+        </div>
+
+        <button type="button" id="addQuestion" class="primary">إضافة سؤال جديد</button>
+        <button type="submit" class="primary">حفظ جميع الأسئلة</button>
+
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
